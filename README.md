@@ -2,7 +2,7 @@
 
 To run the application install the dependencies first with `npm install`.
 
-After that you need to prepare your local DB. Follow the instructions here `https://www.postgresql.org/docs/15/tutorial-start.html` to install and create your Postgres DB.
+After that you need to prepare your local DB. Follow the instructions here [Postgres instructions](https://www.postgresql.org/docs/15/tutorial-start.html) to install and create your Postgres DB.
 
 Next you shoud run `npm run db-create` which will create Users table and add some rows there.
 
