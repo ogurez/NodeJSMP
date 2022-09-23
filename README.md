@@ -1,4 +1,4 @@
-### NODEJSMP Module 2
+### NODEJSMP Module 3
 
 To run the application install the dependencies first with `npm install`.
 
