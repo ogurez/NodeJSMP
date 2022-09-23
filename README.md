@@ -6,6 +6,6 @@ After that you need to prepare your local DB. Follow the instructions here [Post
 
 Next you shoud run `npm run db-create` which will create Users table and add some rows there.
 
-Now you are ready, so tou can run the application with `npm start`
+Now you are ready, so you can run the application with `npm start`
 
 Run linter with `npm run lint`
