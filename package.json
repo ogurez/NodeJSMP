@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npx nodemon ./src/server.js",
-    "lint": "npx eslint ./src"
+    "lint": "npx eslint ./src",
+    "db-create": "psql -d mydb -a -f createDB.sql"
   },
   "author": "",
   "license": "ISC",
