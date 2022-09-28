@@ -1,17 +1,15 @@
 const { Sequelize } = require('sequelize');
 const { sequelize } = require('./index');
 
-const User = sequelize.define('user', {
+const Group = sequelize.define('group', {
     id: {
         type: Sequelize.STRING,
         primaryKey: true
     },
-    login: Sequelize.STRING,
-    password: Sequelize.STRING,
-    age: Sequelize.NUMBER
+    name: Sequelize.STRING
 }, {
     timestamps: false,
-    tableName: 'users'
+    tableName: 'group'
 });
 
-module.exports = { User };
+module.exports = { Group };

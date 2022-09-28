@@ -5,7 +5,8 @@ const {
     getAutoSuggestedUsers,
     createUser,
     deleteUser,
-    updateUser
+    updateUser,
+    addUsersToGroup
 } = require('../controllers/userControllers');
 
 const router = express.Router();
@@ -23,5 +24,7 @@ router.post('/users', validateSchema(userSchema), createUser);
 router.put('/users/:id', validateSchema(userSchema), updateUser);
 
 router.delete('/users/:id', deleteUser);
+
+router.post('/users-to-group/', addUsersToGroup);
 
 module.exports = router;

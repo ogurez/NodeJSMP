@@ -51,4 +51,19 @@ const deleteUser = async (req, res) => {
     res.status(204).send();
 };
 
-module.exports = { getUser, getAutoSuggestedUsers, createUser, deleteUser, updateUser };
+const addUsersToGroup = async (req, res) => {
+    const { group_id, users_id } = req.body;
+    await us.AddUsersToGroup(group_id, users_id);
+
+    if (!group_id) {
+        res.status(404).json({ message: `Group with id ${group_id} not found` });
+    }
+
+    if (!users_id.length) {
+        res.status(404).json({ message: 'Please provide user ids which you want to add to the group' });
+    }
+
+    res.status(204).send();
+};
+
+module.exports = { getUser, getAutoSuggestedUsers, createUser, deleteUser, updateUser, addUsersToGroup };
