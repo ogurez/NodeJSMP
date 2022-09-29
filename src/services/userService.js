@@ -2,6 +2,7 @@ const crypto = require('crypto');
 const { Op } = require('sequelize');
 const { User } = require('../models/userModel');
 const { Group } = require('../models/groupModel');
+const {UserGroups} = require('../models/userGroupsModel')
 
 class UserService {
     async Create(user) {
@@ -56,8 +57,11 @@ class UserService {
     }
 
     async AddUsersToGroup(groupId, userIds) {
-        console.log(123);
-        await Group.create({ id: groupId, name: 'new group', users: [userIds] }, { include: [{ association: User, as: 'users' }] });
+        console.log(123, groupId, userIds);
+        // const user_id = userIds;
+        // const group_id = groupId;
+        const a = { group_id: groupId, user_id: userIds };
+        await UserGroups.create(a);
 
         return userIds;
     }
