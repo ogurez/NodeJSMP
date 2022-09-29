@@ -1,7 +1,7 @@
 const crypto = require('crypto');
 const { Op } = require('sequelize');
 const { User } = require('../models/userModel');
-const { UserGroups } = require('../models/userGroupsModel');
+const { UserGroups } = require('../models/userGroupsModel')
 
 class UserService {
     async Create(user) {
