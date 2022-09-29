@@ -1,6 +1,6 @@
 const  sequelize = require('../db');
-const {User } = require('./userModel')
-const {Group} = require('./groupModel')
+const { User } = require('./userModel');
+const { Group } = require('./groupModel');
 
 const UserGroups = sequelize.define('users_groups', {}, {
     timestamps: false,

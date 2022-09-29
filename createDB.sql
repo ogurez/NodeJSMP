@@ -1,10 +1,29 @@
-CREATE TABLE Users (
+CREATE TABLE users (
     id TEXT,
     login TEXT,
     password TEXT,
     age INTEGER,
     isDeleted BOOLEAN,
     created_at TIMESTAMP DEFAULT NOW()
+);
+
+CREATE TABLE group
+(
+    id   text not null
+        primary key,
+    name text
+);
+
+CREATE TABLE user_groups
+(
+    "userId"  text
+        constraint "userId"
+            references users
+            on update cascade on delete cascade,
+    "groupId" text
+        constraint "groupId"
+            references group
+            on update cascade on delete cascade
 );
 
 INSERT INTO Users (login, password, age, id) VALUES ('John', 'qwerty', 25, 'a192e125-8387-40c5-816f-ab344b25b15f');
