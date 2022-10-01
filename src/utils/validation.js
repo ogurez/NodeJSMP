@@ -17,6 +17,10 @@ const userSchema = Joi.object({
     isDeleted: Joi.boolean().optional()
 });
 
+const groupSchema = Joi.object({
+    name: Joi.string().min(0).max(100).required()
+});
+
 const errorResponse = schemaErrors => {
     const errors = schemaErrors.map(e => {
         const { path, message } = e;
@@ -43,4 +47,4 @@ const validateSchema = schema => {
     };
 };
 
-module.exports = { userSchema, validateSchema };
+module.exports = { userSchema, groupSchema, validateSchema };

@@ -31,37 +31,42 @@ const createUser = async (req, res) => {
 
 const updateUser = async (req, res) => {
     const { id } = req.params;
-    const user = await us.Update(req.body, id);
+    const user = await us.Get(id);
 
     if (!user) {
         res.status(404).json({ message: `User with id ${id} not found` });
     }
+
+    await us.Update(req.body, id);
 
     res.status(200).json(`User with id ${id} updated successfully`);
 };
 
 const deleteUser = async (req, res) => {
     const { id } = req.params;
-    const user = await us.Delete(id);
+    const user = await us.Get(id);
 
     if (!user) {
         res.status(404).json({ message: `User with id ${id} not found` });
     }
+
+    await us.Delete(id);
 
     res.status(204).send();
 };
 
 const addUsersToGroup = async (req, res) => {
     const { group_id, users_id } = req.body;
-    await us.AddUsersToGroup(group_id, users_id);
 
     if (!group_id) {
         res.status(404).json({ message: `Group with id ${group_id} not found` });
     }
 
-    if (!users_id.length) {
+    if (!users_id) {
         res.status(404).json({ message: 'Please provide user ids which you want to add to the group' });
     }
+
+    await us.AddUsersToGroup(group_id, users_id);
 
     res.status(204).send();
 };
