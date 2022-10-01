@@ -30,22 +30,26 @@ const createGroup = async (req, res) => {
 
 const updateGroup = async (req, res) => {
     const { id } = req.params;
-    const group = await gs.Update(req.body, id);
+    const group = await gs.Get(id);
 
     if (!group) {
         res.status(404).json({ message: `Group with id ${id} not found` });
     }
+
+    await gs.Update(req.body, id);
 
     res.status(200).json(`Group with id ${id} updated successfully`);
 };
 
 const deleteGroup = async (req, res) => {
     const { id } = req.params;
-    const group = await gs.Delete(id);
+    const group = await gs.Get(id);
 
     if (!group) {
         res.status(404).json({ message: `Group with id ${id} not found` });
     }
+
+    await gs.Delete(id);
 
     res.status(204).send();
 };

@@ -24,6 +24,11 @@ class GroupService {
 
     async Update(groupBody, id) {
         const group = await Group.findByPk(id);
+
+        if (!group) {
+            throw new Error('Group with provided id was not found in DB');
+        }
+
         const groupId = group.id;
         await Group.update(groupBody, { where: {
             id: groupId
@@ -33,8 +38,13 @@ class GroupService {
     }
 
     async Delete(id) {
-        const groupId = id;
         const group = await Group.findByPk(id);
+
+        if (!group) {
+            throw new Error('Group with provided id was not found in DB');
+        }
+
+        const groupId = id;
         await Group.destroy({
             where: {
                 id: groupId

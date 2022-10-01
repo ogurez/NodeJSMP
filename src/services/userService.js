@@ -1,7 +1,8 @@
 const crypto = require('crypto');
 const { Op } = require('sequelize');
+const sequelize  = require('../db');
 const { User } = require('../models/userModel');
-const { UserGroups } = require('../models/userGroupsModel')
+const { UserGroups } = require('../models/userGroupsModel');
 
 class UserService {
     async Create(user) {
@@ -35,6 +36,11 @@ class UserService {
 
     async Update(userBody, id) {
         const user = await User.findByPk(id);
+
+        if (!user) {
+            throw new Error('User with provided id was not found in DB');
+        }
+
         const userId = user.id;
         await User.update(userBody, { where: {
             id: userId
@@ -44,8 +50,13 @@ class UserService {
     }
 
     async Delete(id) {
-        const userId = id;
         const user = await User.findByPk(id);
+
+        if (!user) {
+            throw new Error('User with provided id was not found in DB');
+        }
+
+        const userId = id;
         await User.destroy({
             where: {
                 id: userId
@@ -56,11 +67,17 @@ class UserService {
     }
 
     async AddUsersToGroup(groupIds, userIds) {
-        userIds.forEach(async v => {
-            await UserGroups.create({ groupId: groupIds, userId: v });
-        });
+        const userGroupsData = userIds.map(v => v = { id: crypto.randomUUID(), groupId: groupIds, userId: v });
 
-        return userIds;
+        try {
+            const res = await sequelize.transaction(async (v) => {
+                await UserGroups.bulkCreate(userGroupsData, { transaction: v });
+            });
+
+            return res;
+        } catch (e) {
+            throw new Error(e);
+        }
     }
 }
 

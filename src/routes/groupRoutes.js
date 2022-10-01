@@ -1,4 +1,5 @@
 const express = require('express');
+const { groupSchema, validateSchema } = require('../utils/validation');
 const {
     getGroup,
     getAllGroups,
@@ -11,11 +12,11 @@ const router = express.Router();
 
 router.get('/groups/:id', getGroup);
 
-router.get('/groups-all', getAllGroups);
+router.get('/groups', getAllGroups);
 
-router.post('/groups', createGroup);
+router.post('/groups', validateSchema(groupSchema), createGroup);
 
-router.put('/groups/:id', updateGroup);
+router.put('/groups/:id', validateSchema(groupSchema), updateGroup);
 
 router.delete('/groups/:id', deleteGroup);
 

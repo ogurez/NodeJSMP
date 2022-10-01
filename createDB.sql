@@ -1,5 +1,6 @@
 CREATE TABLE users (
-    id TEXT,
+    id TEXT not null
+        primary key,
     login TEXT,
     password TEXT,
     age INTEGER,
@@ -16,6 +17,9 @@ CREATE TABLE group
 
 CREATE TABLE user_groups
 (
+    id  text not null
+        constraint id
+            primary key,
     "userId"  text
         constraint "userId"
             references users
@@ -24,8 +28,10 @@ CREATE TABLE user_groups
         constraint "groupId"
             references group
             on update cascade on delete cascade
+    
 );
 
-INSERT INTO Users (login, password, age, id) VALUES ('John', 'qwerty', 25, 'a192e125-8387-40c5-816f-ab344b25b15f');
-
-INSERT INTO Users (login, password, age, id) VALUES ('Jane', 'qweewq', 21, 'b121a325-1247-34c7-672f-gh31f25a27g');
+INSERT INTO Users (login, password, age, id) 
+    VALUES 
+        ('John', 'qwerty', 25, 'a192e125-8387-40c5-816f-ab344b25b15f'),
+        ('Jane', 'qweewq', 21, 'b121a325-1247-34c7-672f-gh31f25a27g');
