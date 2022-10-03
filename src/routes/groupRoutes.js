@@ -7,17 +7,18 @@ const {
     deleteGroup,
     updateGroup
 } = require('../controllers/groupControllers');
+const { executionLogger } = require('../logger');
 
 const router = express.Router();
 
-router.get('/groups/:id', getGroup);
+router.get('/groups/:id', executionLogger(getGroup));
 
-router.get('/groups', getAllGroups);
+router.get('/groups', executionLogger(getAllGroups));
 
-router.post('/groups', validateSchema(groupSchema), createGroup);
+router.post('/groups', validateSchema(groupSchema), executionLogger(createGroup));
 
-router.put('/groups/:id', validateSchema(groupSchema), updateGroup);
+router.put('/groups/:id', validateSchema(groupSchema), executionLogger(updateGroup));
 
-router.delete('/groups/:id', deleteGroup);
+router.delete('/groups/:id', executionLogger(deleteGroup));
 
 module.exports = router;

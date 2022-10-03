@@ -8,6 +8,7 @@ const {
     updateUser,
     addUsersToGroup
 } = require('../controllers/userControllers');
+const { executionLogger } = require('../logger');
 
 const router = express.Router();
 
@@ -15,16 +16,16 @@ router.get('/', (req, res) => {
     res.json({ ok: true });
 });
 
-router.get('/users/:id', getUser);
+router.get('/users/:id', executionLogger(getUser));
 
-router.get('/users-auto-suggest', getAutoSuggestedUsers);
+router.get('/users-auto-suggest', executionLogger(getAutoSuggestedUsers));
 
-router.post('/users', validateSchema(userSchema), createUser);
+router.post('/users', validateSchema(userSchema), executionLogger(createUser));
 
-router.put('/users/:id', validateSchema(userSchema), updateUser);
+router.put('/users/:id', validateSchema(userSchema), executionLogger(updateUser));
 
-router.delete('/users/:id', deleteUser);
+router.delete('/users/:id', executionLogger(deleteUser));
 
-router.post('/users-to-group/', addUsersToGroup);
+router.post('/users-to-group/', executionLogger(addUsersToGroup));
 
 module.exports = router;
