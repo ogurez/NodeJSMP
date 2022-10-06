@@ -1,5 +1,5 @@
 const express = require('express');
-const { userSchema, validateSchema } = require('../utils/validation');
+const { userSchema, validateSchema, userGroupSchema } = require('../utils/validation');
 const {
     getUser,
     getAutoSuggestedUsers,
@@ -26,6 +26,6 @@ router.put('/users/:id', validateSchema(userSchema), executionLogger(updateUser)
 
 router.delete('/users/:id', executionLogger(deleteUser));
 
-router.post('/users-to-group/', executionLogger(addUsersToGroup));
+router.post('/users-to-group/', validateSchema(userGroupSchema), executionLogger(addUsersToGroup));
 
 module.exports = router;

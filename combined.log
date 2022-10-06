@@ -23,3 +23,15 @@
 {"level":"info","message":"::1 - - [03/Oct/2022:15:21:29 +0000] \"POST /groups HTTP/1.1\" 201 66 \"-\" \"PostmanRuntime/7.29.2\"\n","service":"user-service"}
 {"level":"info","message":"::1 - - [03/Oct/2022:15:21:36 +0000] \"POST /groups HTTP/1.1\" 201 66 \"-\" \"PostmanRuntime/7.29.2\"\n","service":"user-service"}
 {"level":"info","message":"::1 - - [03/Oct/2022:15:21:39 +0000] \"GET /groups HTTP/1.1\" 200 202 \"-\" \"PostmanRuntime/7.29.2\"\n","service":"user-service"}
+{"level":"info","message":"::1 - - [06/Oct/2022:15:55:53 +0000] \"PUT /users/32a66bf8-0d4a-4461-b468-beffae7f3692 HTTP/1.1\" 400 114 \"-\" \"PostmanRuntime/7.29.2\"\n","service":"user-service"}
+{"level":"info","message":"::1 - - [06/Oct/2022:15:56:00 +0000] \"PUT /users/32a66bf8-0d4a-4461-b468-beffae7f3692 HTTP/1.1\" 400 114 \"-\" \"PostmanRuntime/7.29.2\"\n","service":"user-service"}
+{"level":"info","message":"::1 - - [06/Oct/2022:15:56:04 +0000] \"PUT /users/32a66bf8-0d4a-4461-b468-beffae7f3692 HTTP/1.1\" 400 114 \"-\" \"PostmanRuntime/7.29.2\"\n","service":"user-service"}
+{"level":"info","message":"::1 - - [06/Oct/2022:15:56:09 +0000] \"PUT /users/32a66bf8-0d4a-4461-b468-beffae7f3692 HTTP/1.1\" 200 72 \"-\" \"PostmanRuntime/7.29.2\"\n","service":"user-service"}
+{"level":"info","message":"::1 - - [06/Oct/2022:15:56:11 +0000] \"GET /ws HTTP/1.1\" 500 1295 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36\"\n","service":"user-service"}
+{"level":"info","message":"::1 - - [06/Oct/2022:15:56:11 +0000] \"GET /ws HTTP/1.1\" 500 1295 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36\"\n","service":"user-service"}
+{"level":"info","message":"::1 - - [06/Oct/2022:16:05:07 +0000] \"GET /ws HTTP/1.1\" 500 1295 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36\"\n","service":"user-service"}
+{"level":"info","message":"::1 - - [06/Oct/2022:16:05:07 +0000] \"GET /ws HTTP/1.1\" 500 1295 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36\"\n","service":"user-service"}
+{"level":"info","message":"::1 - - [06/Oct/2022:16:42:32 +0000] \"PUT /users/32a66bf8-0d4a-4461-b468-beffae7f3692 HTTP/1.1\" 200 72 \"-\" \"PostmanRuntime/7.29.2\"\n","service":"user-service"}
+{"level":"info","message":"::1 - - [06/Oct/2022:16:42:38 +0000] \"GET /groups HTTP/1.1\" 200 202 \"-\" \"PostmanRuntime/7.29.2\"\n","service":"user-service"}
+{"level":"error","message":"Uncaught exception!","service":"user-service"}
+{"level":"info","message":"::1 - - [06/Oct/2022:17:12:57 +0000] \"GET /groups HTTP/1.1\" 200 202 \"-\" \"PostmanRuntime/7.29.2\"\n","service":"user-service"}

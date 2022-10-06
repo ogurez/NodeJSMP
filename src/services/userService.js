@@ -35,35 +35,19 @@ class UserService {
     }
 
     async Update(userBody, id) {
-        const user = await User.findByPk(id);
+        await User.update(userBody, { where: { id } });
 
-        if (!user) {
-            throw new Error('User with provided id was not found in DB');
-        }
-
-        const userId = user.id;
-        await User.update(userBody, { where: {
-            id: userId
-        } });
-
-        return user;
+        return 1;
     }
 
     async Delete(id) {
-        const user = await User.findByPk(id);
-
-        if (!user) {
-            throw new Error('User with provided id was not found in DB');
-        }
-
-        const userId = id;
         await User.destroy({
             where: {
-                id: userId
+                id
             }
         });
 
-        return user;
+        return 1;
     }
 
     async AddUsersToGroup(groupIds, userIds) {
