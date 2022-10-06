@@ -15,6 +15,7 @@ const getUser = async (req, res) => {
         }
     } catch (err) {
         logger.error(`${req.method} ${req.params} ${err.message}`);
+        res.status(500).send();
     }
 };
 
@@ -30,6 +31,7 @@ const getAutoSuggestedUsers = async (req, res) => {
         }
     } catch (err) {
         logger.error(`${req.method} ${req.params} ${err.message}`);
+        res.status(500).send();
     }
 };
 
@@ -39,6 +41,7 @@ const createUser = async (req, res) => {
         res.status(201).json(user);
     } catch (err) {
         logger.error(`${req.method} ${req.params} ${err.message}`);
+        res.status(500).send();
     }
 };
 
@@ -56,6 +59,7 @@ const updateUser = async (req, res) => {
         res.status(200).json(`User with id ${id} updated successfully`);
     } catch (err) {
         logger.error(`${req.method} ${req.params} ${err.message}`);
+        res.status(500).send();
     }
 };
 
@@ -73,6 +77,7 @@ const deleteUser = async (req, res) => {
         res.status(204).send();
     } catch (err) {
         logger.error(`${req.method} ${req.params} ${err.message}`);
+        res.status(500).send();
     }
 };
 
@@ -80,19 +85,12 @@ const addUsersToGroup = async (req, res) => {
     try {
         const { group_id, users_id } = req.body;
 
-        if (!group_id) {
-            res.status(404).json({ message: `Group with id ${group_id} not found` });
-        }
-
-        if (!users_id) {
-            res.status(404).json({ message: 'Please provide user ids which you want to add to the group' });
-        }
-
         await us.AddUsersToGroup(group_id, users_id);
 
         res.status(204).send();
     } catch (err) {
         logger.error(`${req.method} ${req.params} ${err.message}`);
+        res.status(500).send();
     }
 };
 

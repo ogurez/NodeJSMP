@@ -15,6 +15,7 @@ const getGroup = async (req, res) => {
         }
     } catch (err) {
         logger.error(`${req.method} ${req.params} ${err.message}`);
+        res.status(500).send();
     }
 };
 
@@ -29,6 +30,7 @@ const getAllGroups = async (req, res) => {
         }
     } catch (err) {
         logger.error(`${req.method} ${req.params} ${err.message}`);
+        res.status(500).send();
     }
 };
 
@@ -38,6 +40,7 @@ const createGroup = async (req, res) => {
         res.status(201).json(group);
     } catch (err) {
         logger.error(`${req.method} ${req.params} ${err.message}`);
+        res.status(500).send();
     }
 };
 
@@ -55,6 +58,7 @@ const updateGroup = async (req, res) => {
         res.status(200).json(`Group with id ${id} updated successfully`);
     } catch (err) {
         logger.error(`${req.method} ${req.params} ${err.message}`);
+        res.status(500).send();
     }
 };
 
@@ -72,6 +76,7 @@ const deleteGroup = async (req, res) => {
         res.status(204).send();
     } catch (err) {
         logger.error(`${req.method} ${req.params} ${err.message}`);
+        res.status(500).send();
     }
 };
 
