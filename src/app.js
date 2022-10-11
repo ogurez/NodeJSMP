@@ -7,22 +7,20 @@ const { logger } = require('./logger');
 const app = express();
 app.use(express.json());
 
-const myStream = {
-    write: (text) => {
-        logger.info(text);
-    }
-};
-
-app.use(morgan('combined', { stream: myStream }));
+app.use(morgan('Method :method :url has been called with body :body and query params :query - :response-time ms'));
 
 require('dotenv').config({ path: 'src/config/.env', override: true,  debug: true });
 
 app.use('/', users);
-app.use('', groups);
+app.use('/', groups);
 
-app.use((err, req, res) => {
-    res.status(500).send(err.message);
-    logger.error(`${err.status || 500} - ${res.statusMessage} - ${err.message} - ${req.originalUrl} - ${req.method}`);
+app.use((err, req, res,) => {
+    logger.error(`ERROR!@!
+        - STATUS: ${err.status || 500}
+        - Status message:${res.statusMessage} 
+        - Error message:${err.message}
+        - URL:${req.originalUrl}
+        - METHOD:${req.method}`);
 });
 
 process.on('uncaughtException', (err) => {
