@@ -35,3 +35,162 @@
 {"level":"info","message":"::1 - - [06/Oct/2022:16:42:38 +0000] \"GET /groups HTTP/1.1\" 200 202 \"-\" \"PostmanRuntime/7.29.2\"\n","service":"user-service"}
 {"level":"error","message":"Uncaught exception!","service":"user-service"}
 {"level":"info","message":"::1 - - [06/Oct/2022:17:12:57 +0000] \"GET /groups HTTP/1.1\" 200 202 \"-\" \"PostmanRuntime/7.29.2\"\n","service":"user-service"}
+{"level":"error","message":"GET [object Object] connect ECONNREFUSED 127.0.0.1:5432","service":"user-service"}
+{"level":"error","message":"GET [object Object] connect ECONNREFUSED 127.0.0.1:5432","service":"user-service"}
+[31merror[39m:   GET [object Object] connect ECONNREFUSED 127.0.0.1:5432
+[31merror[39m:   GET [object Object] connect ECONNREFUSED 127.0.0.1:5432
+[31merror[39m:   GET [object Object] connect ECONNREFUSED 127.0.0.1:5432
+[31merror[39m:   GET [object Object] connect ECONNREFUSED 127.0.0.1:5432
+{"level":"error","message":"GET [object Object] connect ECONNREFUSED 127.0.0.1:5432","service":"user-service","timestamp":"2022-10-10T20:57:17.298Z"}
+{"level":"error","message":"GET [object Object] connect ECONNREFUSED 127.0.0.1:5432","service":"user-service","timestamp":"2022-10-10T20:58:59.280Z"}
+{"level":"error","message":"PRIVET ","service":"user-service","timestamp":"2022-10-10T20:59:45.013Z"}
+{"level":"error","message":"GET [object Object] connect ECONNREFUSED 127.0.0.1:5432","service":"user-service","timestamp":"2022-10-10T20:59:50.985Z"}
+{"level":"error","message":"GET [object Object] connect ECONNREFUSED 127.0.0.1:5432","service":"user-service","timestamp":"2022-10-10T21:00:06.542Z"}
+{"level":"error","message":"GET [object Object] connect ECONNREFUSED 127.0.0.1:5432","service":"user-service","timestamp":"2022-10-10T21:00:49.749Z"}
+{"level":"error","message":"GET [object Object] connect ECONNREFUSED 127.0.0.1:5432","service":"user-service","timestamp":"2022-10-10T21:01:03.425Z"}
+{"level":"error","message":"GET [object Object] connect ECONNREFUSED 127.0.0.1:5432","service":"user-service","timestamp":"2022-10-10T21:01:09.421Z"}
+{"level":"error","message":"Unhandled Rejection","service":"user-service","timestamp":"2022-10-10T21:03:51.349Z"}
+{"level":"error","message":"GET [object Object] connect ECONNREFUSED 127.0.0.1:5432","service":"user-service","timestamp":"2022-10-10T21:08:57.092Z"}
+{"level":"error","message":"GET [object Object] connect ECONNREFUSED 127.0.0.1:5432","service":"user-service","timestamp":"2022-10-10T21:16:12.794Z"}
+{"level":"error","message":"GET [object Object] connect ECONNREFUSED 127.0.0.1:5432","service":"user-service","timestamp":"2022-10-10T21:16:23.154Z"}
+{"level":"error","message":"GET [object Object] connect ECONNREFUSED 127.0.0.1:5432","service":"user-service","timestamp":"2022-10-10T21:16:32.391Z"}
+{"level":"error","message":"GET [object Object] connect ECONNREFUSED 127.0.0.1:5432","service":"user-service","timestamp":"2022-10-10T21:16:37.427Z"}
+{
+  message: 'GET [object Object] connect ECONNREFUSED 127.0.0.1:5432',
+  level: 'error',
+  service: 'user-service'
+}
+{
+  message: 'GET [object Object] connect ECONNREFUSED 127.0.0.1:5432',
+  level: 'error',
+  service: 'user-service'
+}
+{
+  message: 'GET [object Object] connect ECONNREFUSED 127.0.0.1:5432',
+  level: 'error',
+  service: 'user-service'
+}
+{
+  message: 'GET [object Object] connect ECONNREFUSED 127.0.0.1:5432',
+  level: 'error',
+  service: 'user-service'
+}
+{
+  message: 'GET [object Object] connect ECONNREFUSED 127.0.0.1:5432',
+  level: 'error',
+  service: 'user-service'
+}
+{
+  message: 'GET [object Object] connect ECONNREFUSED 127.0.0.1:5432',
+  level: 'error',
+  service: 'user-service'
+}
+{
+  message: 'GET [object Object] connect ECONNREFUSED 127.0.0.1:5432',
+  level: 'error',
+  service: 'user-service'
+}
+{
+  message: 'GET [object Object] connect ECONNREFUSED 127.0.0.1:5432',
+  level: 'error',
+  service: 'user-service'
+}
+{
+  message: 'GET [object Object] connect ECONNREFUSED 127.0.0.1:5432',
+  level: 'error',
+  service: 'user-service'
+}
+{
+  message: 'GET [object Object] connect ECONNREFUSED 127.0.0.1:5432',
+  level: 'error',
+  service: 'user-service'
+}
+{
+  message: 'GET [object Object] connect ECONNREFUSED 127.0.0.1:5432',
+  level: 'error',
+  service: 'user-service'
+}
+{
+  message: 'GET [object Object] connect ECONNREFUSED 127.0.0.1:5432',
+  level: 'error',
+  service: 'user-service'
+}
+{
+  message: 'GET [object Object] connect ECONNREFUSED 127.0.0.1:5432',
+  level: 'error',
+  service: 'user-service'
+}
+{
+  message: 'GET [object Object] connect ECONNREFUSED 127.0.0.1:5432',
+  level: 'error',
+  service: 'user-service'
+}
+{
+  message: 'GET [object Object] connect ECONNREFUSED 127.0.0.1:5432',
+  level: 'error',
+  service: 'user-service'
+}
+{
+  message: 'GET [object Object] connect ECONNREFUSED 127.0.0.1:5432',
+  level: 'error',
+  service: 'user-service'
+}
+{
+  message: 'ERROR!@! 500 - undefined - undefined - undefined - undefined',
+  level: 'error',
+  service: 'user-service'
+}
+{
+  message: 'ERROR!@! 500 - undefined - undefined - undefined - undefined',
+  level: 'error',
+  service: 'user-service'
+}
+{
+  message: 'ERROR!@! STATUS: 500 - Status message:undefined - Error message:undefined - undefined - undefined',
+  level: 'error',
+  service: 'user-service'
+}
+{
+  message: 'ERROR!@! STATUS: 500 - Status message:undefined - Error message:undefined - undefined - undefined',
+  level: 'error',
+  service: 'user-service'
+}
+{
+  message: 'ERROR!@! STATUS: 500 - Status message:undefined - Error message:undefined - undefined - undefined',
+  level: 'error',
+  service: 'user-service'
+}
+{
+  message: 'ERROR!@! STATUS: 500 - Status message:undefined - Error message:undefined - undefined - undefined',
+  level: 'error',
+  service: 'user-service'
+}
+{
+  message: 'ERROR!@! STATUS: 500 - Status message:undefined - Error message:undefined - undefined - undefined',
+  level: 'error',
+  service: 'user-service'
+}
+{
+  message: 'ERROR!@! STATUS: 500 - Status message:undefined - Error message:undefined - undefined - undefined',
+  level: 'error',
+  service: 'user-service'
+}
+{
+  message: 'ERROR!@! STATUS: 500\n' +
+    '        - Status message:undefined \n' +
+    '        - Error message:undefined\n' +
+    '        - URL:undefined\n' +
+    '        - METHOD:undefined',
+  level: 'error',
+  service: 'user-service'
+}
+{
+  message: 'ERROR!@!\n' +
+    '        - STATUS: 500\n' +
+    '        - Status message:undefined \n' +
+    '        - Error message:undefined\n' +
+    '        - URL:undefined\n' +
+    '        - METHOD:undefined',
+  level: 'error',
+  service: 'user-service'
+}
